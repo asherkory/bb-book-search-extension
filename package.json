@@ -38,12 +38,12 @@
 		"sourceDir": "distribution",
 		"run": {
 			"startUrl": [
-				"https://github.com/fregante/browser-extension-template"
+				"https://www.goodreads.com"
 			]
 		}
 	},
- 	"@parcel/bundler-default-bug": "https://github.com/parcel-bundler/parcel/issues/8071",
- 	"@parcel/bundler-default": {
- 		"minBundles": 10000000
- 	}
+	"@parcel/bundler-default-bug": "https://github.com/parcel-bundler/parcel/issues/8071",
+	"@parcel/bundler-default": {
+		"minBundles": 10000000
+	}
 }

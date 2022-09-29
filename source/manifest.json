@@ -1,39 +1,24 @@
 {
-	"name": "Awesome Extension",
-	"version": "0.0.0",
-	"description": "An awesome new browser extension",
-	"homepage_url": "https://github.com/fregante/browser-extension-template",
+	"name": "BookBub Book Search Extension",
+	"version": "1.0.0",
+	"description": "Searches for books on BookBub",
 	"manifest_version": 3,
-	"minimum_chrome_version": "100",
-	"browser_specific_settings": {
-		"gecko": {
-			"id": "awesome-extension@notlmn.github.io",
-			"strict_min_version": "100.0"
-		}
-	},
+	"action": {},
 	"icons": {
-		"128": "icon.png"
+		"48": "BB_Logo_small.jpeg",
+		"96": "BB_Logo_2x.jpeg"
 	},
-	"permissions": [
-		"storage"
-	],
-	"host_permissions": [
-		"https://github.com/*"
-	],
-	"content_scripts": [
-		{
-			"matches": [ "https://github.com/fregante/browser-extension-template/*" ],
-			"js": [ "content.js" ],
-			"css": [ "content.css" ],
-			"run_at": "document_end"
-		}
-	],
-	"options_ui": {
-		"browser_style": true,
-		"page": "options.html"
+	"action": {
+		"default_icon": "BB_Logo_2x.jpeg"
 	},
+	"host_permissions": ["<all_urls>"],
 	"background": {
-		"service_worker": "background.js",
-		"type": "module"
-	}
+		"service_worker": "background.js"
+	},
+	"content_scripts": [{
+		"matches": ["<all_urls>"],
+		"js": ["content.js"],
+		"css": ["content.css"],
+		"run_at": "document_idle"
+	}]
 }

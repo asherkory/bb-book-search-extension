@@ -1,16 +1,19 @@
-import optionsStorage from './options-storage.js';
+console.log("content.js is running")
+// when text is selected, display a button over the selection
+window.addEventListener("selectionchange", (event) => {
+	console.log("Adding selection event listener")
+	const searchButton = document.createElement("div");
+	searchButton.innerHTML = "Search BookBub";
+	searchButton.id = "bb-search-button";
 
-console.log('💈 Content script loaded for', chrome.runtime.getManifest().name);
-async function init() {
-	const options = await optionsStorage.getAll();
-	const color = 'rgb(' + options.colorRed + ', ' + options.colorGreen + ',' + options.colorBlue + ')';
-	const text = options.text;
-	const notice = document.createElement('div');
-	notice.innerHTML = text;
-	document.body.prepend(notice);
-	notice.id = 'text-notice';
-	notice.style.border = '2px solid ' + color;
-	notice.style.color = color;
-}
+	const selection = window.getSelection();
+	const range = selection.getRangeAt(0);
+	range.collapse();
+	range.insertNode(searchButton);
 
-init();
+	// when button is clicked, send text selection to background worker
+	searchButton.addEventListener("click", (event) => {
+		console.log("Adding button event listener")
+		chrome.runTime.sendMessage({ searchQuery: window.getSelection().toString() });
+	});
+});
