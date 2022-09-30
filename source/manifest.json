@@ -3,7 +3,6 @@
 	"version": "1.0.0",
 	"description": "Searches for books on BookBub",
 	"manifest_version": 3,
-	"action": {},
 	"icons": {
 		"48": "BB_Logo_small.jpeg",
 		"96": "BB_Logo_2x.jpeg"

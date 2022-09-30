@@ -1,4 +1,5 @@
 console.log("content.js is running")
+
 // when text is selected, display a button over the selection
 window.addEventListener("selectionchange", (event) => {
 	console.log("Adding selection event listener")
