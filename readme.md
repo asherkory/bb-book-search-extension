@@ -25,17 +25,23 @@ This project was made for There And Hack Again (hack days 2022).
 To search BookBub, highlight text on any webpage. You can activate the search in two different ways:
 
 1. Right-click on the highlighted text. You'll see a context menu item, `Search BookBub`. Click the menu item.
+
 Chrome:
+
 ![context menu screenshot](https://user-images.githubusercontent.com/12358765/193312402-37b7a6dd-496c-4c61-9ad3-17772a1b9f69.png)
 
 Firefox:
+
 ![context menu screenshot](https://user-images.githubusercontent.com/12358765/193312871-ec122a80-73b9-4725-9f67-cc3b1648dd08.png)
 
 2. Click on the `BB` toolbar icon.
+
 Chrome:
+
 ![toolbar icon screenshot](https://user-images.githubusercontent.com/12358765/193312403-214583cb-30e0-4359-910c-90e52042fa92.png)
 
 Firefox:
+
 ![toolbar icon screenshot](https://user-images.githubusercontent.com/12358765/193312872-c991105b-13a8-4de9-ac00-c80656088e54.png)
 
 A new tab will open, searching for the selected text on BookBub!
