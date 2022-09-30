@@ -21,7 +21,7 @@ chrome.contextMenus.onClicked.addListener(function (info, tab) {
 });
 
 // when toolbar action button is clicked...
-chrome.action.onClicked.addListener(function (tab) {
+chrome.browserAction.onClicked.addListener(function (tab) {
   // get text selection from current tab and perform a search
   chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
     chrome.tabs.sendMessage(tabs[0].id, { method: "getSelection" }, function (response) {

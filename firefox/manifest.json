@@ -2,14 +2,14 @@
 	"name": "BookBub Book Search Extension",
 	"version": "1.0.0",
 	"description": "Searches for books on BookBub",
-	"manifest_version": 3,
+	"manifest_version": 2,
 	"icons": {
 		"16": "bb_16.png",
 		"48": "bb_48.png",
 		"96": "bb_96.png",
 		"128": "bb_128.png"
 	},
-	"action": {
+	"browser_action": {
 		"default_title": "Bookbub Search",
 		"default_icon": {
 			"16": "bb_16.png",
@@ -22,9 +22,8 @@
 		"contextMenus",
 		"tabs"
 	],
-	"host_permissions": ["<all_urls>"],
 	"background": {
-		"service_worker": "background.js"
+		"scripts": ["background.js"]
 	},
 	"content_scripts": [{
 		"matches": ["<all_urls>"],
