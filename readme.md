@@ -1,1 +1,0 @@
-# BookBub Book Search Extension
