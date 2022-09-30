@@ -4,20 +4,29 @@
 	"description": "Searches for books on BookBub",
 	"manifest_version": 3,
 	"icons": {
-		"48": "BB_Logo_small.jpeg",
-		"96": "BB_Logo_2x.jpeg"
+		"16": "bb_16.png",
+		"48": "bb_48.png",
+		"96": "bb_96.png",
+		"128": "bb_128.png"
 	},
 	"action": {
-		"default_icon": "BB_Logo_2x.jpeg"
+		"default_title": "Bookbub Search",
+		"default_icon": {
+			"16": "bb_16.png",
+			"48": "bb_48.png",
+			"96": "bb_96.png",
+			"128": "bb_128.png"
+		}
 	},
-	"host_permissions": ["<all_urls>"],
+	"permissions": [
+		"contextMenus"
+	],
 	"background": {
 		"service_worker": "background.js"
 	},
 	"content_scripts": [{
 		"matches": ["<all_urls>"],
 		"js": ["content.js"],
-		"css": ["content.css"],
 		"run_at": "document_idle"
 	}]
 }
